@@ -5,60 +5,60 @@
 
 <style>
   :root {
-    --bg: #f7f5f9;
+    --bg: #fff6f8;
     --surface: #ffffff;
-    --surface-alt: #efeaf2;
-    --ink: #201b29;
-    --ink-soft: #675e77;
-    --ink-faint: #948aa3;
-    --border: #e1dbe8;
-    --accent: #d01857;
-    --accent-strong: #b0134b;
-    --accent-soft: #f6d9e4;
-    --accent-ink: #7a0e38;
-    --chip-bg: #efe3ea;
-    --chip-ink: #5c3348;
-    --new-bg: #fff0d8;
+    --surface-alt: #fce9ee;
+    --ink: #33222a;
+    --ink-soft: #7a5c68;
+    --ink-faint: #b08998;
+    --border: #f3d8e0;
+    --accent: #c13a69;
+    --accent-strong: #a62d57;
+    --accent-soft: #fce1e9;
+    --accent-ink: #7a1f3e;
+    --chip-bg: #fbe3ea;
+    --chip-ink: #7c3652;
+    --new-bg: #fff0dc;
     --new-ink: #925a00;
-    --shadow: 0 1px 2px rgba(32, 27, 41, 0.06), 0 8px 24px -12px rgba(32, 27, 41, 0.18);
+    --shadow: 0 1px 2px rgba(51, 34, 42, 0.06), 0 8px 24px -12px rgba(51, 34, 42, 0.16);
   }
 
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --bg: #17131d;
-      --surface: #201b29;
-      --surface-alt: #2a2333;
-      --ink: #f1eaf4;
-      --ink-soft: #b6a9c4;
-      --ink-faint: #7d7290;
-      --border: #372e44;
-      --accent: #ff5c93;
-      --accent-strong: #ff86ac;
-      --accent-soft: #3a1f2c;
-      --accent-ink: #ffb4ce;
-      --chip-bg: #2e2536;
-      --chip-ink: #e7c9db;
-      --new-bg: #3a2c14;
+      --bg: #241820;
+      --surface: #2e1e28;
+      --surface-alt: #3a2530;
+      --ink: #fceaf1;
+      --ink-soft: #d9afc0;
+      --ink-faint: #9c7688;
+      --border: #4a2f3d;
+      --accent: #ff8fb3;
+      --accent-strong: #ffa8c4;
+      --accent-soft: #45283a;
+      --accent-ink: #ffc2da;
+      --chip-bg: #3d2635;
+      --chip-ink: #f0c6d8;
+      --new-bg: #3d2e14;
       --new-ink: #ffc266;
       --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 12px 28px -14px rgba(0, 0, 0, 0.6);
     }
   }
 
   :root[data-theme="dark"] {
-    --bg: #17131d;
-    --surface: #201b29;
-    --surface-alt: #2a2333;
-    --ink: #f1eaf4;
-    --ink-soft: #b6a9c4;
-    --ink-faint: #7d7290;
-    --border: #372e44;
-    --accent: #ff5c93;
-    --accent-strong: #ff86ac;
-    --accent-soft: #3a1f2c;
-    --accent-ink: #ffb4ce;
-    --chip-bg: #2e2536;
-    --chip-ink: #e7c9db;
-    --new-bg: #3a2c14;
+    --bg: #241820;
+    --surface: #2e1e28;
+    --surface-alt: #3a2530;
+    --ink: #fceaf1;
+    --ink-soft: #d9afc0;
+    --ink-faint: #9c7688;
+    --border: #4a2f3d;
+    --accent: #ff8fb3;
+    --accent-strong: #ffa8c4;
+    --accent-soft: #45283a;
+    --accent-ink: #ffc2da;
+    --chip-bg: #3d2635;
+    --chip-ink: #f0c6d8;
+    --new-bg: #3d2e14;
     --new-ink: #ffc266;
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 12px 28px -14px rgba(0, 0, 0, 0.6);
   }
@@ -342,6 +342,18 @@
     line-height: 1.8;
   }
 
+  .visitor-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 14px;
+  }
+  .visitor-line img {
+    display: block;
+    border-radius: 4px;
+    height: 20px;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .item { transition: none; }
   }
@@ -378,6 +390,9 @@
     <footer>
       <p>※本サイトは各メンバーのソロ公式ファンクラブが公開しているNEWSページの見出しをファンが手作業でまとめた非公式の情報整理サイトです。本文・詳細・お申込みは必ず各FC公式サイトでご確認ください。</p>
       <p>掲載データは自動更新ではなく、取得時点のスナップショットです。</p>
+      <p class="visitor-line">🌸 これまでの訪問者数
+        <img src="https://visitor-badge.laobi.icu/badge?page_id=mitu1200-love.akb-solofc-news&amp;left_color=fbe3ea&amp;right_color=c13a69" alt="訪問者数バッジ" loading="lazy" onerror="this.remove()">
+      </p>
     </footer>
   </main>
 </div>
