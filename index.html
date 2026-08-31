@@ -366,7 +366,7 @@
   <div class="stats">
     <div class="stat"><b id="statMembers">–</b><span>参加FC数</span></div>
     <div class="stat"><b id="statNews">–</b><span>掲載NEWS数</span></div>
-    <div class="stat"><b>2026.08.30</b><span>最終取得日</span></div>
+    <div class="stat"><b>2026.08.31</b><span>最終取得日</span></div>
   </div>
 </header>
 
@@ -399,49 +399,79 @@
 
 <script>
 (function () {
-  var MEMBERS = [
+    var MEMBERS = [
     { name: "福岡聖菜", origin: "https://seinafukuoka.officialfc.jp", news: [
       ["2026.08.16", "8月28日「ここからだ」公演　福岡聖菜生誕祭 個人ファンクラブ枠お申込みについて", "/news/detail/f81ab4d1-d864-4893-8bfa-6de5f189d516"],
       ["2026.08.05", "「福岡聖菜 26th BIRTHDAY EVENT」開催決定☆彡", "/news/detail/72c61491-c96f-4991-a84d-c4011f16566c"],
       ["2026.06.24", "新規入会キャンペーンのお知らせ", "/news/detail/c7aeb332-3120-4bb4-8a47-d89e05ae6755"],
       ["2026.06.24", "福岡聖菜 オフィシャルファンクラブ オープン！", "/news/detail/5a40d30f-7e96-46e5-b37b-7592f5880166"]
-    ]},
+    ] },
     { name: "千葉恵里", origin: "https://chibaerii-fc.jp", news: [
       ["2026.04.14", "千葉恵里ファンクラブイベント開催決定！", "/news/detail/76b5cc1e-f1c2-45ad-86ce-45e02dcd29d6"],
       ["2026.02.17", "フジテレビ「ミュージックジェネレーション」に出演します！", "/news/detail/d7965134-143f-4c9c-bb2b-9a1df535320f"],
-      ["2026.02.02", "「千葉恵里カレンダー2026 発売記念イベント」開催決定＆一般先行販売(抽選)", "/news/detail/413f6ef1-bc3c-4dc1-89f5-b0641fc91993"],
+      ["2026.02.02", "「千葉恵里カレンダー2026 発売記念イベント」開催決定＆一般先行販売(抽選) 本日より申込開始！", "/news/detail/413f6ef1-bc3c-4dc1-89f5-b0641fc91993"],
       ["2026.01.08", "千葉恵里ファンクラブイベント「EriiTHM Valentine Party 2026」開催決定！", "/news/detail/54e4928a-dbeb-452d-9868-bf976cf1fd20"],
       ["2025.12.24", "千葉恵里 ファンクラブ限定イベント 開催決定！", "/news/detail/c72950df-a890-46a3-8363-4f7431d64b8b"],
-      ["2025.10.24", "11月4日「ここからだ」公演 千葉恵里生誕祭 個人ファンクラブ枠", "/news/detail/2GTyVGSYGe4YYsDFKrUpva"],
+      ["2025.10.24", "11月4日「ここからだ」公演　千葉恵里生誕祭 個人ファンクラブ枠お申込みについて", "/news/detail/2GTyVGSYGe4YYsDFKrUpva"],
       ["2025.09.21", "千葉恵里オンラインガチャ 9月22日（月）より開催決定！", "/news/detail/lzZrCSicR85SRwYLg3wql"],
-      ["2025.04.09", "千葉恵里 オンラインガチャが4月10日よりスタート！", "/news/detail/2sIeAE4qNgq4rAwfEcWIAe"]
-    ]},
+      ["2025.04.09", "千葉恵里 オンラインガチャが4月10日よりスタート！", "/news/detail/2sIeAE4qNgq4rAwfEcWIAe"],
+      ["2024.12.27", "お問い合わせ窓口 年末年始のお休みのご案内", "/news/detail/3juKCyfD6pRdJlENO909vi"],
+      ["2024.12.19", "千葉恵里 クリスマスオンラインガチャが20日よりスタート！", "/news/detail/3SJIgyb1z1ZOArEuOpjjdg"],
+      ["2024.10.24", "千葉恵里 ハロウィンオンラインガチャが25日よりスタート！", "/news/detail/4Hov6HLApiKg8YmSkXNNoN"],
+      ["2024.10.10", "千葉恵里ファンクラブ会員限定イベント「千葉恵里生誕イベント～Happy ちばーすでい！～」開催決定！", "/news/detail/6CgaUktXfDOaSwFBj9ANaw"],
+      ["2024.09.15", "【通信販売】千葉恵里 生誕記念グッズ販売のご案内", "/news/detail/4uC6euGI8X2UuBEl8EnEp1"],
+      ["2024.09.13", "千葉恵里 ファンクラブ会員限定 生誕記念イベント 開催決定！", "/news/detail/71XjtZjoaer64jOpfse8iz"],
+      ["2024.09.04", "千葉恵里浴衣オンラインガチャが6日よりスタート！", "/news/detail/4PVXYhvA3a2bhqB1leccSz"],
+      ["2024.07.12", "「千葉恵里ファンクラブイベント～夏の思い出作ろうよ～」開催詳細決定＆一次申込開始！", "/news/detail/3kcaC7GXOOIz4PQF4JheCB"],
+      ["2024.07.03", "千葉恵里 ファンクラブ限定イベント 開催決定！", "/news/detail/1mZX69hFGnyeroUfjjhpes"],
+      ["2024.02.03", "【祝♡開設1周年】メッセージムービー公開＆2024年額会員限定特典のお知らせ", "/news/detail/3rnmAONiQUa0986zloHowO"],
+      ["2024.01.16", "【重要】早期入会特典の長期不在・住所不備等へ対する対応期間について", "/news/detail/2FwQcDqE48a6yxYE4L38bd"],
+      ["2023.12.01", "YouTube連動企画！FC限定プレゼント応募キャンペーン", "/news/detail/6tNf4qWqAbov7aEgScuraO"]
+    ] },
     { name: "岩立沙穂", origin: "https://iwatatesaho-fc.jp", news: [
       ["2026.08.06", "【中西智代梨×岩立沙穂 合同イベント】開催決定!!", "/news/detail/b7ac1122-a51c-40d1-9848-7263434893bb"],
       ["2026.06.15", "公演グッズ期間限定再販売のお知らせ", "/news/detail/a3f95fe6-3f39-4b78-8c9e-331b2d3ed101"],
-      ["2026.04.23", "【イベント全体に対する注意事項】とりこいろ vol.3", "/news/detail/734cc181-ee69-4c52-a3e2-b35e174a1992"],
-      ["2026.04.19", "とりこいろvol.3 Saho Iwatate Fan meeting グッズラインナップ発表!!", "/news/detail/de778069-6aa0-45e1-9445-ba256b45012a"],
+      ["2026.04.23", "【イベント全体に対する注意事項】とりこいろ vol.3 Saho Iwatate Fan meeting 一緒に歌って遊んでしゃべりまーす♪ 　※4/24追記", "/news/detail/734cc181-ee69-4c52-a3e2-b35e174a1992"],
+      ["2026.04.19", "とりこいろvol.3  Saho Iwatate Fan meeting  一緒に歌って遊んでしゃべりまーす♪  グッズラインナップ発表!!　※4/24追記", "/news/detail/de778069-6aa0-45e1-9445-ba256b45012a"],
       ["2026.04.10", "【4/13追記あり】とりこいろvol.3グッズ付きチケットについて", "/news/detail/1151d007-f12d-4b8c-9085-ecc399ffecc2"],
-      ["2026.04.10", "とりこいろvol.3 Saho Iwatate Fan meeting 明日チケットFC先行受付開始‼️", "/news/detail/b13fcb25-630b-46e7-b3b8-f58673e8b95f"],
-      ["2026.04.01", "とりこいろvol.3 Saho Iwatate Fan meeting メインビジュアル解禁!!", "/news/detail/7c6215e7-a7fb-4097-b0ed-6c0a8fed8888"],
-      ["2026.03.25", "とりこいろvol.3 Saho Iwatate Fan meeting 開催決定！", "/news/detail/d82324ea-d3a1-40f7-9b75-85b6a9926280"],
+      ["2026.04.10", "とりこいろvol.3   Saho Iwatate Fan meeting   一緒に歌って遊んでしゃべりまーす♪  明日チケットFC先行受付開始‼️", "/news/detail/b13fcb25-630b-46e7-b3b8-f58673e8b95f"],
+      ["2026.04.01", "とりこいろvol.3 Saho Iwatate Fan meeting 一緒に歌って遊んでしゃべりまーす♪  メインビジュアル解禁!!", "/news/detail/7c6215e7-a7fb-4097-b0ed-6c0a8fed8888"],
+      ["2026.03.25", "とりこいろvol.3 Saho Iwatate Fan meeting 一緒に歌って遊んでしゃべりまーす♪ 開催決定！", "/news/detail/d82324ea-d3a1-40f7-9b75-85b6a9926280"],
       ["2026.01.23", "【中西智代梨×岩立沙穂 SPECIAL FAN MEETING】開催のお知らせ✨", "/news/detail/da792355-df46-4cb2-816b-32e558281ef9"],
-      ["2025.10.06", "10月17日「ここからだ」公演 岩立沙穂生誕祭 個人ファンクラブ枠お申込みについて", "/news/detail/2lFMNqOZznM8Nzgp3Z1mqt"]
-    ]},
+      ["2025.10.06", "10月17日「ここからだ」公演　岩立沙穂生誕祭 個人ファンクラブ枠お申込みについて", "/news/detail/2lFMNqOZznM8Nzgp3Z1mqt"],
+      ["2025.09.17", "「さっほーと行くバスツアー in 山梨 ～秋のうーまーい食べつくそう♪～」開催決定!!", "/news/detail/23JabwIfWgxJQuX688MFBN"],
+      ["2025.04.08", "岩立沙穂　初主演舞台「地獄の控室」出演決定！", "/news/detail/46PT56oWybafj5x8BdLb8z"],
+      ["2025.03.23", "【通信販売】 「SAHO IWATATE LIVE 2025 〜とりこいろ vol.2〜」イベントグッズ販売のご案内", "/news/detail/35x0SfoDm1nnathE44Iaep"],
+      ["2025.03.14", "【会場販売】 「SAHO IWATATE LIVE 2025 〜とりこいろ vol.2〜」イベントグッズ販売のご案内", "/news/detail/71ZRT4X3qX1IbG60rONHwQ"],
+      ["2025.02.28", "SAHO IWATATE LIVE 2025 〜とりこいろ vol.2〜 一般販売実施！", "/news/detail/1bKCI9n4sp0m5iNSKUCi14"],
+      ["2025.02.14", "SAHO IWATATE LIVE 2025 〜とりこいろ vol.2〜開催決定！", "/news/detail/7gCdn4ctHEleyt5xXuBKHx"],
+      ["2025.01.31", "〈NEWS〉朗読劇 【「5分後に意外な結末」Vol.2 in YOKOHAMA】への出演が決定！", "/news/detail/5bS00KKph5pb49wdaMr6Y8"],
+      ["2025.01.05", "岩立沙穂 新春記念オンラインガチャが6日よりスタート！", "/news/detail/60PxuwXHBKtrmI4OVFdqpc"],
+      ["2024.12.27", "お問い合わせ窓口 年末年始のお休みのご案内", "/news/detail/66TqcTpIcOebzK06VNfNn9"],
+      ["2024.10.11", "〈SPECIAL〉10月14日(月)にLIVE配信が決定！", "/news/detail/56EUTIJqyZtc6dmxSvAPbs"]
+    ] },
     { name: "山内瑞葵", origin: "https://yamauchimizuki-fc.jp", news: [
-      ["2026.08.27", "FC限定MOVIE更新！", "/news/detail/a9940f07-719b-4fee-bbae-055c1ad4ef1e"],
+      ["2026.08.30", "FC限定MOVIE更新！", "/news/detail/a9940f07-719b-4fee-bbae-055c1ad4ef1e"],
       ["2026.08.26", "『山内瑞葵 BIRTHDAY EVENT 2026』チケット完売のお知らせ", "/news/detail/ed329547-e115-454d-bdf3-a0d4abcfd3ba"],
       ["2026.08.22", "山内瑞葵 主演映画『キオク』劇場公開日決定＆予告編公開！", "/news/detail/bb68ef7f-c497-47df-a93c-88ea1f898973"],
       ["2026.08.07", "山内瑞葵主演映画「キオク」大阪先行試写会実施のお知らせ", "/news/detail/76ca2439-1b4b-4c27-aa99-54043fdfb803"],
-      ["2026.08.02", "第14回全国高等学校ダンス部選手権 \"DCC公式サポーター\"に就任！", "/news/detail/8a5de729-d365-4bda-ad31-d6902bcef7e9"],
+      ["2026.08.02", "第14回全国高等学校ダンス部選手権  \"DCC公式サポーター\"に就任！", "/news/detail/8a5de729-d365-4bda-ad31-d6902bcef7e9"],
       ["2026.07.31", "『山内瑞葵 BIRTHDAY EVENT 2026』 一般発売のご案内", "/news/detail/de8bf382-c75c-4f69-b9e9-e6fdb8c8f00a"],
       ["2026.07.23", "『山内瑞葵 BIRTHDAY EVENT 2026』アップグレード抽選受付のご案内", "/news/detail/6195be90-910f-4e36-8521-bab855dd4257"],
       ["2026.07.16", "山内瑞葵　ファンクラブリニューアル記念ガチャ開催決定！", "/news/detail/9705ba44-5383-4a26-aacc-dd6094eca713"],
       ["2026.07.16", "『山内瑞葵 BIRTHDAY EVENT 2026』オフィシャル先行受付が本日7/16(木)18時より開始！", "/news/detail/dba5b5ea-7452-4fc1-90f0-e7500775e342"],
       ["2026.07.01", "『山内瑞葵 BIRTHDAY EVENT 2026』開催決定！！本日よりFC先行受付開始！", "/news/detail/dd25debc-c551-418a-9d6d-3c5661bdaade"],
-      ["2026.05.18", "地上波ドラマ＆劇場公開映画｢キオク｣ 主演を務めることが決定！", "/news/detail/36e7114d-60ce-40a9-8187-1e146e953985"],
-      ["2026.03.16", "山内瑞葵 ホワイトデーオンラインガチャが3月17日よりスタート！", "/news/detail/6b5b8ef7-e582-4abe-9806-8453c4f08c66"]
-    ]},
+      ["2026.05.18", "地上波ドラマ＆劇場公開映画｢キオク｣  主演を務めることが決定！", "/news/detail/36e7114d-60ce-40a9-8187-1e146e953985"],
+      ["2026.03.16", "山内瑞葵 ホワイトデーオンラインガチャが3月17日よりスタート！", "/news/detail/6b5b8ef7-e582-4abe-9806-8453c4f08c66"],
+      ["2025.09.30", "「山内瑞葵 4th ソロミニライブ 〜 恋する 4-Tune Zucky 〜」開催決定！", "/news/detail/2nATdYhHjfVQqCjjOQA5Tr"],
+      ["2025.09.29", "10月10日「RESET」公演　山内瑞葵生誕祭 個人ファンクラブ枠お申込みについて", "/news/detail/7HDLyiutShVQmVfHxWMcWu"],
+      ["2025.09.20", "山内瑞葵 ファンクラブ会員限定イベント 開催決定！", "/news/detail/2nNteMLSTPxNkYKfQ3r4UM"],
+      ["2025.08.28", "【通信販売】山内瑞葵オフィシャルグッズ販売のご案内", "/news/detail/39inSRTic8GBUKC0oHu7zK"],
+      ["2025.04.15", "山内瑞葵 オンラインガチャ好評につき再販決定！", "/news/detail/61sPNh7ddVLJOtaDyry53s"],
+      ["2025.04.13", "山内瑞葵 オンラインガチャが4月14日よりスタート！", "/news/detail/iLZNTzlcmyKabZqrr6XRx"],
+      ["2025.03.19", "【通信販売】 「山内瑞葵 3rdソロミニライブ ホワイトデーのおくりもの」イベントグッズ販売のご案内", "/news/detail/6V9DappaIAix3SzV61AgQR"],
+      ["2025.03.14", "【会場販売】 「山内瑞葵 3rdソロミニライブ ホワイトデーのおくりもの」イベントグッズ販売のご案内", "/news/detail/3ClkYDpqYymGaL3InlExAs"]
+    ] },
     { name: "長友彩海", origin: "https://nagatomoayami-fc.jp", news: [
       ["2026.03.06", "3月18日「ここからだ」公演　長友彩海生誕祭 個人ファンクラブ枠お申込みについて", "/news/detail/d145053c-2404-4637-89b3-94ec1564a886"],
       ["2025.12.27", "2026年 デジタルカレンダープレゼントのお知らせ", "/news/detail/e9cc14e4-f3f7-4b28-a760-7d2c8bd801da"],
@@ -450,8 +480,20 @@
       ["2025.06.28", "【通信販売】 長友彩海アクリルペンライト販売のご案内", "/news/detail/5MY8aactoW7I2mmyI8R7F2"],
       ["2025.05.29", "FCイベント🦋🌧", "/news/detail/2j3WqtZL1WwfXZLpv0uVGU"],
       ["2025.05.19", "「長友彩海ファンクラブイベント 〜今年の夏も一緒に過ごそう🎶〜」開催詳細が決定！", "/news/detail/3jlYNVDh3pptXhfYs8sr41"],
-      ["2025.05.14", "長友彩海ファンクラブ限定イベント開催決定！", "/news/detail/4zM3EcMPECK9ssZooVppMi"]
-    ]},
+      ["2025.05.14", "長友彩海ファンクラブ限定イベント開催決定！", "/news/detail/4zM3EcMPECK9ssZooVppMi"],
+      ["2025.05.10", "【なるたおちゃんねる】長友彩海編", "/news/detail/5wim0AgP5Bsp4jLvkrXlo2"],
+      ["2025.03.27", "長友彩海 オンラインガチャが開催決定！", "/news/detail/3K88GB5DsxFaZOEX0lqiTd"],
+      ["2024.12.27", "お問い合わせ窓口 年末年始のお休みのご案内", "/news/detail/18QQ8ROTPutbmH1og81aAR"],
+      ["2024.12.26", "2025年 デジタルカレンダープレゼントのお知らせ", "/news/detail/20itMm9ntaevGodMFKRWMM"],
+      ["2024.09.25", "【通信販売】 長友彩海生誕記念グッズ販売のご案内", "/news/detail/20lXAocIGujsCXzZmMqHfS"],
+      ["2024.08.17", "【追加案内】『長友彩海ファンクラブイベント〜まだまだ夏は終わらないよっ！一緒にBBQしよう〜 』に関して", "/news/detail/7nlkxY8U4FjkNEJfF0Hz9G"],
+      ["2024.08.15", "『長友彩海ファンクラブイベント〜まだまだ夏は終わらないよっ！一緒にBBQしよう〜 』開催決定！！", "/news/detail/6zWR4ukCfwv0pB2t1w5ETk"],
+      ["2024.08.13", "9/7(土)長友彩海オフィシャルファンクラブ限定BBQイベント開催決定！", "/news/detail/5SxFaXAEUmPnDrYYrlE7Kh"],
+      ["2024.08.08", "長友彩海浴衣オンラインガチャが8月9日よりスタート！", "/news/detail/411AFJwBIriSi9xMyLskHD"],
+      ["2024.04.25", "長友彩海オンラインガチャが26日よりスタート！", "/news/detail/y6maY2k4GDgrJURdv0tVg"],
+      ["2024.04.23", "【重要】早期入会特典の長期不在・住所不備等へ対する対応期間について", "/news/detail/5DzyJAn4lYdhNs80vRDHuL"],
+      ["2024.01.26", "「Specialキャンペーン」に関するお願い", "/news/detail/j2WCTTCCa3xaqKO15B26K"]
+    ] },
     { name: "髙橋彩音", origin: "https://takahashiayane-fc.jp", news: [
       ["2026.07.29", "「CERINE -S/S RECEPTION-」 イベント限定アクリルスタンド(髙橋彩音) オンライン受注販売！", "/news/detail/bdc52528-dd26-4684-a8ea-d8d229bc9183"],
       ["2026.07.24", "【お詫びと訂正】「CERINE -S/S RECEPTION-」開催時間について", "/news/detail/54e598d8-3d62-4050-a6c2-b5aea20739a5"],
@@ -459,8 +501,21 @@
       ["2026.06.13", "髙橋彩音＆永野芹佳「CERINE -S/S RECEPTION-」開催決定！", "/news/detail/d879c51c-d45b-4de3-8664-411c64421315"],
       ["2026.02.14", "2月26日「ここからだ」公演 髙橋彩音生誕祭 個人ファンクラブ枠", "/news/detail/78e84bb5-fe01-41cc-a040-f8cb88982384"],
       ["2026.02.07", "髙橋彩音 28th Birthday event　開催決定！！【2/7更新】", "/news/detail/57c9acb3-63bf-4378-b721-cc82119c6d30"],
-      ["2025.11.04", "髙橋彩音&永野芹佳 『CERINE -A/W RECEPTION PARTY-』開催決定", "/news/detail/3MFHwdALUi5haM9gVhnltj"]
-    ]},
+      ["2025.11.04", "髙橋彩音&永野芹佳 『CERINE -A/W RECEPTION PARTY-』開催決定", "/news/detail/3MFHwdALUi5haM9gVhnltj"],
+      ["2025.07.12", "【一般先着販売】髙橋彩音2025年夏イベント第2弾!! 「ミニライブイベント ～Summer greetings to you～」", "/news/detail/3fBMaYnnVbdU9WiG5hVc95"],
+      ["2025.07.02", "髙橋彩音2025年夏イベント第2弾!! 「ミニライブイベント ～Summer greetings to you～」", "/news/detail/7IZwntBPO3gL1uZiPDKw0y"],
+      ["2025.07.02", "髙橋彩音2025年夏イベント第1弾!! 「夏の宝探しアドベンチャー ～カブトムシを探しに行こう☆～」", "/news/detail/2hkJCgVzNbooCvQ4QPrctV"],
+      ["2025.01.19", "髙橋彩音 新春記念オンラインガチャが20日よりスタート！", "/news/detail/5Gh1wJ8Bbpi98rUW7RrdsS"],
+      ["2024.12.27", "お問い合わせ窓口 年末年始のお休みのご案内", "/news/detail/6sDZgP7arMMKLjZ3u9DcW7"],
+      ["2024.10.04", "髙橋彩音FC会員限定イベント「Sweetie Sweets Secret  Party♡」開催決定！", "/news/detail/4iilscp9R2Q0f17fbGqQfd"],
+      ["2024.09.27", "髙橋彩音オフィシャルファンクラブ限定イベント 開催決定！", "/news/detail/2QxIlg4zUFy0geWxQYre4d"],
+      ["2024.04.30", "【重要】「オリジナル会員証カード」 プレゼントキャンペーンの長期不在・住所不備等へ対する対応期間について", "/news/detail/6HrDLOZAhwVr1swY5NFRqk"],
+      ["2024.03.13", "「オリジナル会員証カード」プレゼントキャンペーンに関するお願い", "/news/detail/1AOeCetzxtZqaFLCdmQsiW"],
+      ["2024.02.20", "【不具合解消のお知らせ】オンラインストアにアクセスできない", "/news/detail/5ipQXGC5hbbW4HRxTk4FKb"],
+      ["2024.02.16", "【販売開始のお知らせ】【通信販売】『髙橋彩音バレンタインファンミーティング』グッズ", "/news/detail/6hf1OzzyPieFxYmVTT7A7o"],
+      ["2024.02.05", "【通信販売】『髙橋彩音バレンタインファンミーティング』グッズ販売のご案内", "/news/detail/4gnkV6gEmW0bqnORI1WJoE"],
+      ["2024.02.05", "【会場販売】『髙橋彩音バレンタインファンミーティング』グッズ販売のご案内", "/news/detail/6vm9VI4b3BBw78uAwcBloG"]
+    ] },
     { name: "永野芹佳", origin: "https://naganoserika-fc.jp", news: [
       ["2026.06.27", "「CERINE -S/S RECEPTION-」チケット販売スケジュール", "/news/detail/09b3c773-3024-4619-9703-23531dc54362"],
       ["2026.06.13", "CERINE -S/S RECEPTION PARTY- 開催決定！", "/news/detail/40c3500b-b6a3-4802-9221-075d6a0bf98d"],
@@ -469,160 +524,280 @@
       ["2026.02.14", "永野芹佳　バレンタインオンラインガチャが 16日より開催決定！", "/news/detail/9eba907e-71cd-4184-a07d-45f7ac17ebb7"],
       ["2026.01.16", "永野芹佳ファンクラブ限定イベント開催のお知らせ", "/news/detail/c6deabcd-9462-46f8-9c53-9b490bcaa0af"],
       ["2025.11.17", "永野芹佳クリスマスイベント2025開催決定！", "/news/detail/6Mauc2OA4eckpuxmaY9vma"],
-      ["2025.11.04", "永野芹佳×髙橋彩音合同イベント「CERINE -A/W RECEPTION PARTY-」開催決定！", "/news/detail/13Y88rMPW5xSCKOb3ohkGU"]
-    ]},
+      ["2025.11.04", "永野芹佳×髙橋彩音合同イベント「CERINE -A/W RECEPTION PARTY-」開催決定！", "/news/detail/13Y88rMPW5xSCKOb3ohkGU"],
+      ["2025.09.19", "ハロウィンイベント2025開催決定！", "/news/detail/4TVCquGSEmE66Ca8vcLU6l"],
+      ["2025.02.18", "ファンクラブイベント「永野芹佳Birthday Event2025」一般販売実施！", "/news/detail/678xxoHRIJNdkRCi4PeL9h"],
+      ["2025.02.07", "ファンクラブイベント「永野芹佳Birthday Event2025」開催決定！", "/news/detail/2IyIWuwigU4eyKPmTi15bx"],
+      ["2024.12.27", "お問い合わせ窓口 年末年始のお休みのご案内", "/news/detail/7f3plGTbpYm947Xgpxzd7G"],
+      ["2024.06.27", "【重要】「オリジナル会員証カード」 プレゼントキャンペーンの長期不在・住所不備等へ対する対応期間について", "/news/detail/47VaZ8O2u6bPUIu4h3IaR9"],
+      ["2024.06.20", "【雑誌】6月25日(火)発売 ヤングチャンピオン2024年No.14号 掲載決定！", "/news/detail/1PfiSE3b6JHc0G0zvJXsDL"],
+      ["2024.04.18", "【雑誌】4月26日(金)発売 B.L.T.6月号 掲載決定！", "/news/detail/1ysDrfQMH6Ypg7DgCg8Efn"],
+      ["2024.03.27", "【会場販売】永野芹佳ファンクラブ会員限定イベント『永野芹佳Birthday Event2024』グッズ販売のご案内", "/news/detail/34LY7NqvNiIcl8nL722HtE"],
+      ["2024.03.01", "ファンクラブ会員限定イベント「永野芹佳Birthday Event2024」開催決定！", "/news/detail/2ikV2CQagC1S7hBny2w0IT"],
+      ["2024.02.14", "3月30日(土)永野芹佳ファンクラブイベント開催決定！", "/news/detail/Gqy8dYaQVmOyMD71HIoZS"],
+      ["2024.02.14", "永野芹佳 バレンタインオンラインガチャが本日よりスタート！", "/news/detail/5PjhulYEEhslPEdeoIBMEC"],
+      ["2024.02.01", "永野芹佳オフィシャルファンクラブオープン！", "/news/detail/6mXZMtk967PN4G8Xwcq7A8"]
+    ] },
     { name: "徳永羚海", origin: "https://tokunagaremi.official-fc.site", news: [
+      ["2026.08.31", "徳永羚海ファンクラブイベント「Premium Birthday Party！〜れみたんばくたん20th〜」の詳細が決定！", "/news/detail/ef1af10d-f223-4128-8f0e-dc6a31329611"],
       ["2026.08.20", "徳永羚海 ファンクラブイベント 開催決定！", "/news/detail/fd020114-ce23-4817-9006-b2efd60bd9fb"],
       ["2026.04.14", "徳永羚海ファンクラブイベント開催決定！", "/news/detail/e000bfaa-0462-4c06-ba67-2b5b4e6b0fe2"],
       ["2025.10.10", "10月21日「RESET」公演　徳永羚海生誕祭 個人ファンクラブ枠お申込みについて", "/news/detail/7j2z2IeIyLxqB1PO0d00Aq"],
       ["2025.09.18", "【通信販売】徳永羚海オフィシャルグッズ販売のご案内", "/news/detail/Ndw3TROqjJtRFfrdEvJtd"],
-      ["2025.05.19", "徳永羚海ファンクラブイベント「れみと夏物語はじめませんか？2025」開催詳細が決定！", "/news/detail/1dqQKJf0sLPk1eYco7hLZC"]
-    ]},
+      ["2025.05.19", "徳永羚海ファンクラブイベント「れみと夏物語はじめませんか？2025」開催詳細が決定！", "/news/detail/1dqQKJf0sLPk1eYco7hLZC"],
+      ["2025.05.14", "徳永羚海ファンクラブ限定イベント開催決定！", "/news/detail/2OTjaC6DtuPp8JJfWEGW50"],
+      ["2025.03.18", "徳永羚海JK卒業記念オンラインガチャが開催決定！", "/news/detail/1tpey2P8u4q1ti4R9hj4Yj"],
+      ["2024.12.27", "お問い合わせ窓口 年末年始のお休みのご案内", "/news/detail/01IpqRHTwPzDam9lf6PGMT"],
+      ["2024.12.11", "徳永羚海 クリスマスオンラインガチャ再販開始！", "/news/detail/4YJQo4kuBkMsrbl8N10YpX"],
+      ["2024.12.09", "徳永羚海 クリスマスオンラインガチャが開催決定！", "/news/detail/1f9R9yR6OLQhGMT5tiJEm3"],
+      ["2024.12.05", "とくながーるコレクション！～LJK「レアな女子高生降臨」～ 開催決定！", "/news/detail/31mwHXsKQ5HD5ImXwQs0HH"],
+      ["2024.12.01", "徳永羚海 ファンクラブ限定イベント 開催決定！", "/news/detail/2f1x7pdUO1nVaXZQOd9AIx"],
+      ["2024.11.12", "【通信販売】徳永羚海オフィシャルグッズ販売のご案内", "/news/detail/4EgpG6oPBGYKdyptIOCfT4"],
+      ["2024.10.01", "新規入会キャンペーンのお知らせ", "/news/detail/3cEjlcadgdtDFonEQ1yrhE"],
+      ["2024.10.01", "徳永羚海 オフィシャルファンクラブオープン！", "/news/detail/3Qw7l4qLVxf29MqF0wtZA2"]
+    ] },
     { name: "布袋百椛", origin: "https://hoteimoka.officialfc.jp", news: [
       ["2026.07.03", "布袋百椛ファンクラブイベント「ほてちゃんのきらきら Summer Party」の詳細が決定！", "/news/detail/b8be9d5e-0956-46f1-936f-3c839fa3138e"],
       ["2026.06.25", "布袋百椛 ファンクラブイベント 開催決定！", "/news/detail/ba27b4bb-7ac7-4b3e-bbed-1cd54ea8d577"],
       ["2026.06.21", "布袋百椛 オンラインガチャ開催決定！※6/22追記", "/news/detail/bcb9300f-7f13-49cd-8eda-06a4956b214b"],
       ["2026.01.08", "布袋百椛ファンクラブイベント「もかろんとあまあまなひととき♪」開催決定！", "/news/detail/9d784bbb-3cb6-4783-b59e-beb216f69647"],
       ["2026.01.01", "1月13日「RESET」公演　布袋百椛生誕祭 個人ファンクラブ枠", "/news/detail/d62def59-6fec-40f7-bcf9-13dc743fcdc5"],
-      ["2025.12.24", "布袋百椛 ファンクラブ限定イベント 開催決定！", "/news/detail/7c4fd3b4-1c24-428a-baa7-98bb5a736acb"]
-    ]},
+      ["2025.12.24", "布袋百椛 ファンクラブ限定イベント 開催決定！", "/news/detail/7c4fd3b4-1c24-428a-baa7-98bb5a736acb"],
+      ["2025.08.31", "布袋百椛　オンラインガチャが 9月1日より開催決定！", "/news/detail/6iAnm7UIHO4qDPLVI3aIXV"],
+      ["2025.05.08", "布袋百椛 初のオンラインガチャが 9日より開催決定！", "/news/detail/5Dn197klHIsFo1Osmzh0rk"],
+      ["2025.01.11", "【通信販売】布袋百椛オフィシャルグッズ販売のご案内", "/news/detail/26gWjHoNmwwunFYToKCzeB"],
+      ["2024.12.27", "お問い合わせ窓口 年末年始のお休みのご案内", "/news/detail/4BU929a30rf6SdBKvqmrAs"],
+      ["2024.12.05", "布袋百椛ファンクラブイベント～好きになってくれてありがろん♪～ 開催決定！", "/news/detail/16jfqO5YqA2L1ZPjsD9CW1"],
+      ["2024.12.01", "新規入会キャンペーンのお知らせ ※2月28日追記", "/news/detail/MyE01ppqMUNLK1ZFRUhen"],
+      ["2024.12.01", "布袋百椛 オフィシャルファンクラブオープン＆限定イベント 開催決定！", "/news/detail/1HIuS3xo8zu0LbcSP12Y0M"]
+    ] },
     { name: "山﨑空", origin: "https://yamazakisora.officialfc.jp", news: [
       ["2026.05.01", "5月13日「RESET」公演　山﨑空生誕祭 個人ファンクラブ枠お申込みについて", "/news/detail/04b66303-3fe0-496c-82c9-2886e15507bf"],
       ["2026.04.06", "山﨑空ファンクラブイベント「そらランドへようこそ！」開催決定！", "/news/detail/d8fb9dcf-88e7-4e35-a930-7272f65ede9c"],
       ["2026.03.27", "山﨑空 ファンクラブ限定イベント 開催決定！", "/news/detail/c9f8d1bb-879f-49ee-9c64-4a20bbda1e46"],
       ["2025.12.14", "山﨑空　オンラインガチャが15日より開催決定！", "/news/detail/f6d81cc9-499c-4487-a3da-d6152bfc873a"],
-      ["2025.05.12", "山﨑空　初のオンラインガチャが 13日より開催決定！", "/news/detail/48io688Bs4gJaWGonpv9bA"]
-    ]},
+      ["2025.05.12", "山﨑空　初のオンラインガチャが 13日より開催決定！", "/news/detail/48io688Bs4gJaWGonpv9bA"],
+      ["2025.04.28", "5月13日「ここからだ」公演　山﨑空生誕祭 個人ファンクラブ枠お申込みについて", "/news/detail/6hLoe9WwmA5BkMtWAoYYJg"],
+      ["2025.04.24", "山﨑空ファンクラブイベント「そららっこと空の旅」開催決定！", "/news/detail/iMLcRg3n22oi6ClmdJy2l"],
+      ["2025.02.27", "【通信販売】山﨑空オフィシャルグッズ販売のご案内", "/news/detail/2LiZZpNCL4jQXy5tEI1t9K"],
+      ["2024.12.26", "新規入会キャンペーンのお知らせ", "/news/detail/4TOfVWKdvZsZz1HrQoZE5H"],
+      ["2024.12.26", "山﨑空 オフィシャルファンクラブオープン！", "/news/detail/4blZ1gS7YhcppqnB0jQ1fZ"]
+    ] },
     { name: "水島美結", origin: "https://mizushimamiyuu.officialfc.jp", news: [
+      ["2026.08.31", "水島美結 ファンクラブイベント 開催決定！", "/news/detail/8f498ef2-3779-4301-ade7-b65ed8d6c6b8"],
       ["2026.04.06", "水島美結ファンクラブイベント「meとyouで作る楽しい時間🎶」開催決定！", "/news/detail/f27c3479-e3a2-4969-9a02-47d1928c4230"],
       ["2026.03.27", "水島美結 ファンクラブ限定イベント 開催決定！", "/news/detail/4f3e519b-9b84-48e0-8d88-4272740ac4cc"],
       ["2026.01.22", "【通信販売】水島美結 FCオリジナルグッズ販売のお知らせ", "/news/detail/46991191-812c-4085-b279-25745da78773"],
       ["2025.12.27", "1月8日「RESET」公演　水島美結生誕祭 個人ファンクラブ枠お申込みについて", "/news/detail/105925f4-87f7-4253-b4ee-6cf96f5aaeb1"],
-      ["2025.10.07", "水島美結　秋のオンラインガチャが 本日18時より再販決定！", "/news/detail/RTOLfd8Sm09Kyhm0SqQp3"]
-    ]},
+      ["2025.10.07", "水島美結　秋のオンラインガチャが 本日18時より再販決定！", "/news/detail/RTOLfd8Sm09Kyhm0SqQp3"],
+      ["2025.10.05", "水島美結　秋のオンラインガチャが 6日より開催決定！", "/news/detail/7agxgOcd5T0TdIz6b3vT9s"],
+      ["2025.06.22", "水島美結　初のオンラインガチャが 23日より開催決定！", "/news/detail/3unwMeWxggPNE8X2eHaghI"],
+      ["2025.05.19", "掲載コンテンツのSNS等への転載に関するご注意", "/news/detail/2W2uV1jEzpXuXPUONoVMb2"],
+      ["2025.03.20", "【通信販売】水島美結 FCオリジナルグッズ販売のお知らせ", "/news/detail/3CVs8jMTrQKkwktxVQFHt5"],
+      ["2025.02.03", "水島美結ファンクラブイベント「meがyouに幸せを届けます♡」開催決定！", "/news/detail/YdyFGSoYfwoBeX1hN8GvM"],
+      ["2025.01.23", "新規入会キャンペーンのお知らせ", "/news/detail/2526DTE36dW7WFY3VkSDmh"],
+      ["2025.01.23", "水島美結 オフィシャルFCオープン＆限定イベント開催決定！", "/news/detail/1s4anymp02u0AAmzjQRgTx"]
+    ] },
     { name: "畠山希美", origin: "https://henyorinntonozomi.officialfc.jp", news: [
       ["2026.06.18", "畠山希美 SUMMERオンラインガチャが19日より開催決定！", "/news/detail/ff60b0da-0092-4f60-afeb-aee517980cd1"],
       ["2026.04.14", "畠山希美ファンクラブイベント「みんなここに集合〜！」開催決定！", "/news/detail/ada0a122-aae2-4e12-98f1-e205567224e7"],
       ["2026.04.07", "畠山希美 ファンクラブ限定イベント 開催決定！", "/news/detail/e87c7f7c-1c53-4787-a2d2-a6e1fe394b6b"],
       ["2026.01.26", "2月7日「RESET」公演　畠山希美生誕祭 個人ファンクラブ枠", "/news/detail/264ca88a-149f-4c44-b27a-ecca42d360d0"],
-      ["2026.01.24", "畠山希美　生誕記念オンラインガチャが 25日より開催決定！", "/news/detail/a080b317-4dbb-416f-8eeb-a0fd063884b2"]
-    ]},
+      ["2026.01.24", "畠山希美　生誕記念オンラインガチャが 25日より開催決定！", "/news/detail/a080b317-4dbb-416f-8eeb-a0fd063884b2"],
+      ["2025.09.23", "【通信販売】畠山希美オフィシャルグッズ販売のご案内", "/news/detail/1rrLsguy8nMaV3vGaGmopK"],
+      ["2025.08.19", "畠山希美ファンクラブイベント「のんと遊ぼう！」開催決定！", "/news/detail/5WgH0sxEHKDDhmeQHnFjoL"],
+      ["2025.08.07", "畠山希美 ファンクラブ限定イベント 開催決定！", "/news/detail/5cMDKwnvUmvdHIC6Qq4Hv5"],
+      ["2025.03.13", "畠山希美 活動休止期間中のオフィシャルファンクラブにつきまして", "/news/detail/4pTDVD5rtOTLty1exZ5oqR"],
+      ["2025.03.13", "畠山希美個人FCイベント「のんと遊ぼう！」開催中止に伴う返金のご案内", "/news/detail/1kFfUXFFaLcWG8VsdvBXXT"],
+      ["2025.01.25", "新規入会キャンペーンのお知らせ　※5/23追記", "/news/detail/2OsIn9CKL7f4gD2GD4Fev5"],
+      ["2025.01.25", "畠山希美 オフィシャルFCオープン＆限定イベント開催決定！", "/news/detail/5DVBsBmVVglRnIEawtJKk1"]
+    ] },
     { name: "佐藤綺星", origin: "https://airisato.officialfc.jp", news: [
       ["2026.08.27", "佐藤綺星　オンラインガチャが明日 28日より開催決定！", "/news/detail/03ed49cb-253f-45ff-b18c-b6963facef13"],
       ["2026.08.12", "8月24日「ここからだ」公演　佐藤綺星生誕祭 個人ファンクラブ枠お申込みについて", "/news/detail/43a2cf8a-212d-4354-8ec6-29a3222fffbb"],
       ["2026.05.07", "佐藤綺星 ファンクラブイベントの詳細が決定！", "/news/detail/227dc749-7062-43e4-ae79-0e2c4bd826ba"],
       ["2026.04.30", "佐藤綺星 ファンクラブイベント 開催決定！", "/news/detail/a260ba29-a3be-48ef-a451-5b9c2a4af12d"],
-      ["2025.12.26", "佐藤綺星　オンラインガチャが 27日より開催決定！", "/news/detail/1829acdf-44a7-4496-b370-a0a9d26ec0be"]
-    ]},
+      ["2025.12.26", "佐藤綺星　オンラインガチャが 27日より開催決定！", "/news/detail/1829acdf-44a7-4496-b370-a0a9d26ec0be"],
+      ["2025.06.24", "佐藤綺星 初の生誕記念オンラインガチャ再販決定！", "/news/detail/63Q4HNkmmLwW4SH1ch1Oei"],
+      ["2025.06.21", "佐藤綺星 初の生誕記念オンラインガチャが24日より開催決定！", "/news/detail/1aAxMiF64zArpIGxPv9IMl"],
+      ["2025.06.11", "6月24日「ここからだ」公演　佐藤綺星生誕祭 個人ファンクラブ枠お申込みについて", "/news/detail/6ERS2PsnusY61ZACLFmlKc"],
+      ["2025.05.19", "佐藤綺星ファンクラブイベント開催詳細が決定！", "/news/detail/3nUZi4rhnS88r5wI5Tk3UO"],
+      ["2025.05.14", "佐藤綺星ファンクラブ限定イベント開催決定！", "/news/detail/4stRN3OvNOmsp713W0qETH"],
+      ["2025.03.24", "【通信販売】佐藤綺星オフィシャルグッズ販売のご案内", "/news/detail/5CDS0QRoWjKuYtk4GICDhg"],
+      ["2025.02.14", "新規入会キャンペーンのお知らせ ※6月30日追記", "/news/detail/2dMhtPUWaP6wRfwomXMuuW"],
+      ["2025.02.14", "佐藤綺星 オフィシャルファンクラブ オープン！", "/news/detail/2e9ZKO3rCh5D7WLmDikMYu"]
+    ] },
     { name: "平田侑希", origin: "https://hiratayuki.officialfc.jp", news: [
       ["2026.07.03", "「平田侑希Birthday Event- 24年目の夏❤️ -」の詳細が決定！", "/news/detail/ce19a1bc-14f1-4357-b7ff-567578c2cd9f"],
       ["2026.06.25", "平田侑希 ファンクラブイベント 開催決定！", "/news/detail/04e59427-8f55-4c68-b67f-f83ef4bb9681"],
       ["2025.12.18", "平田 侑希初のオンラインガチャが19日より開催決定！", "/news/detail/a32d67fe-848a-46f1-8dd4-b8a52e5912ca"],
       ["2025.09.24", "「平田侑希バースデーイベント　〜ゆきと過ごすとくべつなひ♡〜」開催決定！", "/news/detail/7IfSjJXswWTcpSCwOvVu6v"],
-      ["2025.09.07", "9月19日「そこに未来はある」公演　平田侑希生誕祭 個人ファンクラブ枠お申込みについて", "/news/detail/3YogSeg4h8dFFIl7iJI8G9"]
-    ]},
+      ["2025.09.07", "9月19日「そこに未来はある」公演　平田侑希生誕祭 個人ファンクラブ枠お申込みについて", "/news/detail/3YogSeg4h8dFFIl7iJI8G9"],
+      ["2025.09.03", "平田侑希 ファンクラブ限定イベント 開催決定！", "/news/detail/2fuqrTuf3Ykv0eW9mNuEDm"],
+      ["2025.05.11", "【通信販売】平田侑希オフィシャルグッズ販売のご案内", "/news/detail/2P2fgbr6EiJoFl04LpQONU"],
+      ["2025.04.10", "『平田侑希1stファンクラブイベント 今日の天気はゆき♡』開催決定！", "/news/detail/32fHkdDsyUOesj2EoYZvO0"],
+      ["2025.02.22", "新規入会キャンペーンのお知らせ", "/news/detail/3u8m1MJcM1vLi7niC1u2z7"],
+      ["2025.02.22", "平田侑希 オフィシャルファンクラブ オープン！", "/news/detail/2iUgovRqcZsZcdi4Igzjfp"]
+    ] },
     { name: "正鋳真優", origin: "https://masaimayuu.official-fc.site", news: [
       ["2026.08.25", "正鋳真優 ONLINE GACHAが明日 26日より開催決定！", "/news/detail/56de801c-deab-46ae-87d5-591087e2ae85"],
       ["2026.07.03", "「正鋳真優ファンクラブイベント〜暑中見舞い申し上げます〜」の詳細が決定！", "/news/detail/8e734d91-eb75-4f8f-a316-641d30662af6"],
       ["2026.06.25", "正鋳真優 ファンクラブイベント 開催決定！", "/news/detail/f08b1c89-2ae6-4540-bf7c-1280f79dc7c9"],
       ["2026.02.20", "3月4日「RESET」公演 正鋳真優生誕祭 個人ファンクラブ枠", "/news/detail/5fe2f6af-d21b-4643-9095-3390c38c237e"],
-      ["2025.11.27", "正鋳真優　オンラインガチャが 28日より開催決定！", "/news/detail/52cb3S7xLOWiW593hKnQwI"]
-    ]},
+      ["2025.11.27", "正鋳真優　オンラインガチャが 28日より開催決定！", "/news/detail/52cb3S7xLOWiW593hKnQwI"],
+      ["2025.07.03", "正鋳真優　初のオンラインガチャが 4日より開催決定！", "/news/detail/cHhneYfpPjwrE7ziHJZ9t"],
+      ["2025.05.19", "正鋳真優ファンクラブイベント「まゆうの時間に付き合ってくださーーい！！」開催詳細が決定！", "/news/detail/0ZzwItZ4JKUDHeqerI04T"],
+      ["2025.05.14", "正鋳真優ファンクラブ限定イベント開催決定！", "/news/detail/AgQIgXbZkztfeJb8pkjpK"],
+      ["2025.04.13", "【通信販売】 正鋳真優オフィシャルグッズ販売のご案内", "/news/detail/6RqdFkWB8sHQzRQlGN1dt2"],
+      ["2025.03.01", "新規入会キャンペーンのお知らせ", "/news/detail/2fCgW3Z7QQtFKBl6nSIDu"],
+      ["2025.03.01", "正鋳真優 オフィシャルファンクラブ オープン！", "/news/detail/36S1ZGS0vaobDkFur08T59"]
+    ] },
     { name: "坂川陽香", origin: "https://hiyukasakagawa.officialfc.jp", news: [
+      ["2026.08.31", "坂川陽香ファンクラブイベント｢祝 成人！ひゆかを愛でたい20祭｣の詳細が決定！", "/news/detail/75c4d601-b340-4fc9-b718-067a29ecbc9a"],
       ["2026.08.24", "坂川陽香ファンクラブイベント開催決定！", "/news/detail/df022067-45f2-4580-9623-4443f7e89c10"],
       ["2026.04.14", "坂川陽香ファンクラブイベント「ひゆかとひゅーうぃーごー！」開催決定！", "/news/detail/40152cd0-a245-4b3b-a264-e41ab60eea25"],
       ["2026.04.07", "坂川陽香ファンクラブ限定イベント開催決定！", "/news/detail/6b6c5190-7223-4811-b902-c25a1b56ccb2"],
       ["2026.01.16", "【通信販売】坂川陽香 FCオリジナルグッズ販売のお知らせ", "/news/detail/e694900b-cd11-4cd9-997b-cb50006270cf"],
-      ["2025.10.05", "10月16日「RESET」公演　坂川陽香生誕祭 個人ファンクラブ枠お申込みについて", "/news/detail/LakMpSxDJuejkbaTNRDsw"]
-    ]},
+      ["2025.10.05", "10月16日「RESET」公演　坂川陽香生誕祭 個人ファンクラブ枠お申込みについて", "/news/detail/LakMpSxDJuejkbaTNRDsw"],
+      ["2025.07.16", "坂川陽香オンラインガチャ 17日より開催決定！", "/news/detail/4gARZPy7rR2pBDmIK1N2eJ"],
+      ["2025.04.24", "坂川陽香ファンクラブイベント「\\ ひゅーひゅー /みんな集まれ‼️笑ってエイトモ〜‼️」開催決定！", "/news/detail/5Na5Niy7oPchUHLFkrp6ky"],
+      ["2025.03.31", "【通信販売】 坂川陽香オフィシャルグッズ販売のご案内", "/news/detail/5YZbj9c7N2hjYf6TTO835X"],
+      ["2025.03.16", "新規入会キャンペーンのお知らせ ※7月28日追記", "/news/detail/5XmSp6OEZiDQHTquPfQOKk"],
+      ["2025.03.16", "坂川陽香 オフィシャルファンクラブ オープン！", "/news/detail/6o2m7Ym8Hqpa2vcNhik5Vy"]
+    ] },
     { name: "太田有紀", origin: "https://yukiota.officialfc.jp", news: [
       ["2026.08.10", "太田有紀ファンクラブイベント「太田有紀 Autumn Fan Meeting 2026」開催決定！", "/news/detail/a4e34714-8222-4a97-9c7e-bd062273f05c"],
       ["2026.07.31", "太田有紀ファンクラブイベント開催決定！", "/news/detail/0da3caca-d7f3-4d70-87fa-57fc0d2a89f4"],
       ["2026.04.14", "太田有紀ファンクラブイベント「少し遅れたゆきたんのBirthdayParty」開催決定！", "/news/detail/e54201e7-b35b-4fe7-a4cf-eadaffc78db1"],
       ["2026.04.07", "太田有紀ファンクラブイベント開催決定！", "/news/detail/cf1ea976-4dc6-44ac-bd40-a969e002c98f"],
-      ["2026.03.15", "3月27日「ここからだ」公演　太田有紀生誕祭 個人ファンクラブ枠お申込みについて", "/news/detail/f78d2286-fd8e-43ad-9d62-cba873da95ed"]
-    ]},
+      ["2026.03.15", "3月27日「ここからだ」公演　太田有紀生誕祭 個人ファンクラブ枠お申込みについて", "/news/detail/f78d2286-fd8e-43ad-9d62-cba873da95ed"],
+      ["2026.03.13", "太田有紀 ホワイトデーオンラインガチャが 14日(土)より開催決定！", "/news/detail/2078531e-1fe3-4957-bdfa-29f6f994751b"],
+      ["2025.07.24", "太田有紀　初のオンラインガチャが 25日より開催決定！", "/news/detail/Y8uetsp8yjRKgTLERkSL6"],
+      ["2025.06.14", "【通信販売】太田有紀オフィシャルグッズ販売のご案内", "/news/detail/5d9vE6oiAefTG94mapwsnF"],
+      ["2025.05.19", "太田有紀ファンクラブイベント「ゆきたんとあそぼう！」開催詳細が決定！", "/news/detail/31EPWsN2mYa4oxtchdoqi8"],
+      ["2025.05.14", "太田有紀ファンクラブ限定イベント開催決定！", "/news/detail/3W5HnHV7IAuMAlxaq6E8Hh"],
+      ["2025.03.27", "新規入会キャンペーンのお知らせ", "/news/detail/4ljop673UlfZgkngjCDi6W"],
+      ["2025.03.27", "太田有紀 オフィシャルファンクラブ オープン！", "/news/detail/6lznCHA1J7LwiM3r33a6bX"]
+    ] },
     { name: "橋本恵理子", origin: "https://erikohashimoto.officialfc.jp", news: [
+      ["2026.08.31", "橋本恵理子 ファンクラブイベント 開催決定！", "/news/detail/52330481-0a7c-43b9-853f-03332a51d4a8"],
       ["2026.08.21", "橋本恵理子SUMMERオンラインガチャが明日 22日より開催決定！", "/news/detail/43b682a8-a60b-40b7-93eb-414fbe5e7dd7"],
       ["2026.04.04", "4月16日「RESET」公演　橋本恵理子生誕祭 個人ファンクラブ枠お申込みについて", "/news/detail/431e78ef-b1f3-47ca-bfb2-bd4080ffb026"],
       ["2025.09.29", "橋本恵理子ファンクラブイベント「橋本恵理子 Fan club 2025秋」開催決定！", "/news/detail/ajVkfoZCOsJUWf6heC1LL"],
       ["2025.09.19", "橋本恵理子 ファンクラブ限定イベント 開催決定！", "/news/detail/2QVvgmXTyGMHckVBKUu9sG"],
-      ["2025.09.04", "橋本恵理子　初のオンラインガチャが 5日より開催決定！", "/news/detail/1HLxu7MuIsonJtkvzCVeAj"]
-    ]},
+      ["2025.09.04", "橋本恵理子　初のオンラインガチャが 5日より開催決定！", "/news/detail/1HLxu7MuIsonJtkvzCVeAj"],
+      ["2025.08.05", "【通信販売】橋本恵理子オフィシャルグッズ販売のご案内", "/news/detail/3uyqf4WuOyHdBAoXeV7r2r"],
+      ["2025.05.28", "6月9日「ここからだ」公演　橋本恵理子生誕祭 個人ファンクラブ枠お申込みについて", "/news/detail/1nl5a7wk9OsHBI7fFqq9FW"],
+      ["2025.05.28", "新規入会キャンペーンのお知らせ", "/news/detail/wl75bXBVtbyOKZjLopO9f"],
+      ["2025.05.28", "橋本恵理子 オフィシャルファンクラブ オープン！", "/news/detail/5KQAvJ2ofJCqXPNBVgelpf"]
+    ] },
     { name: "武藤小麟", origin: "https://mutoorin.official-fc.site", news: [
       ["2026.08.05", "8月17日「RESET」公演　武藤小麟生誕祭 個人ファンクラブ枠お申込みについて", "/news/detail/5f32999e-063d-4335-b8d5-d5d76b74badd"],
       ["2026.07.31", "【会場販売】武藤小麟ファンクラブイベント「Happy Orin Day Lv.26もわんちゃんねこちゃんおりんちゃん！」グッズ販売のご案内 ※2026年8月9日追記", "/news/detail/6a29bbe4-382a-45f3-8b1c-8220a5dab183"],
       ["2026.07.03", "武藤小麟ファンクラブイベント「Happy Orin Day Lv.26もわんちゃんねこちゃんおりんちゃん！」開催決定！", "/news/detail/3baa6405-ff04-435f-a403-40b7651d1c2d"],
       ["2026.06.25", "武藤小麟 ファンクラブイベント 開催決定！", "/news/detail/68232054-5bcb-4492-95d0-3e095f237878"],
       ["2026.06.08", "【会場販売】武藤姉妹合同イベント「ようこそ武藤家へ」グッズ販売のご案内", "/news/detail/92203556-38bc-4b19-9702-6becfad4fef8"],
-      ["2026.05.14", "武藤姉妹合同イベント「ようこそ武藤家へ」開催決定！", "/news/detail/abd9f09b-bdd8-4e29-8baa-15cfcb29b6c2"]
-    ]},
+      ["2026.06.08", "【通信販売】武藤姉妹合同イベント「ようこそ武藤家へ」グッズ販売のご案内", "/news/detail/869d2dc4-1de5-4291-b95e-93a44650436a"],
+      ["2026.05.14", "武藤姉妹合同イベント「ようこそ武藤家へ」開催決定！", "/news/detail/abd9f09b-bdd8-4e29-8baa-15cfcb29b6c2"],
+      ["2026.05.07", "武藤小麟  ファンクラブイベント 開催決定！", "/news/detail/f6789ab5-e21d-4aa7-b874-91546c53094f"],
+      ["2026.02.21", "武藤小麟 猫の日記念オンラインガチャが2月22日（日）より開催決定！", "/news/detail/0883656d-192c-4ac8-a720-022001e14c42"],
+      ["2025.07.11", "7月24日「RESET」公演　武藤小麟生誕祭 個人ファンクラブ枠お申込みについて", "/news/detail/2gyL9vxjgWBwfpikuKQsa8"],
+      ["2025.06.19", "武藤小麟ファンクラブイベント「オリン爆誕〜Lv.25もキミにきめた！〜」開催決定！", "/news/detail/5PDgL9RUwDBjwmMzVoub8U"],
+      ["2025.06.12", "武藤小麟 ファンクラブ限定イベント開催決定！", "/news/detail/5yJ0u2y7SiyaUkNHghCdx8"],
+      ["2025.06.10", "【通信販売】武藤小麟オフィシャルグッズ販売のご案内", "/news/detail/5MYSPdqBW2nsEbfIQ0EvdI"],
+      ["2025.06.10", "新規入会キャンペーンのお知らせ", "/news/detail/5N2jtuQSJVwKmXAEnRn3bn"],
+      ["2025.06.10", "武藤小麟オフィシャルファンクラブ オープン！", "/news/detail/5KNabsPJ9gLLbuHxptGWP2"]
+    ] },
     { name: "工藤華純", origin: "https://kasumikudo.officialfc.jp", news: [
       ["2026.06.05", "6月17日「そこに未来はある」公演　工藤華純生誕祭 個人ファンクラブ枠お申込みについて", "/news/detail/7be4c77e-ad5c-4274-a35c-d6f8288f78e4"],
       ["2025.09.24", "工藤華純ファンクラブイベント「あなたのハートをpass me！！集まれ！かすみんワールド」開催決定！", "/news/detail/51q5bzHSxLJZcsuxAcnYM6"],
       ["2025.09.10", "工藤華純 ファンクラブ限定イベント 開催決定！", "/news/detail/5tmwackb0KQUMIeSrz9HIK"],
       ["2025.08.24", "【通信販売】工藤華純オフィシャルグッズ販売のご案内", "/news/detail/5JWEnsLIaRXgmnHp1WYvpi"],
-      ["2025.07.02", "7月15日「RESET」公演　工藤華純生誕祭 個人ファンクラブ枠お申込みについて", "/news/detail/3h7sYuO9yhlaD1Cu9IXerv"]
-    ]},
+      ["2025.07.02", "7月15日「RESET」公演　工藤華純生誕祭 個人ファンクラブ枠お申込みについて", "/news/detail/3h7sYuO9yhlaD1Cu9IXerv"],
+      ["2025.06.15", "新規入会キャンペーンのお知らせ", "/news/detail/6iBBomAAwMzbMgaGinmsZX"],
+      ["2025.06.15", "工藤華純 オフィシャルファンクラブ オープン！", "/news/detail/2YOhg1zyqhuzfB7ZsVjnhd"]
+    ] },
     { name: "新井彩永", origin: "https://araisae.officialfc.jp", news: [
+      ["2026.08.31", "新井彩永ファンクラブイベント「21st Birthday Party」の詳細が決定！", "/news/detail/81a4bd3c-729f-489b-8ddf-3d9db3d88a9a"],
       ["2026.08.28", "【通信販売】新井彩永 FCオリジナルグッズ販売のお知らせ", "/news/detail/9f21ea0d-156e-4e81-a3c6-7284c4c53569"],
       ["2026.08.24", "新井彩永 ファンクラブイベント 開催決定！", "/news/detail/e735555d-8145-4fc4-a09e-4bba0c7fadb2"],
       ["2026.01.13", "「新井彩永ファンクラブイベント　〜まかせなさえしてみませんか？🌼〜」開催決定！", "/news/detail/5e0e62ff-ffd2-4b04-a577-dde82da621fa"],
       ["2025.12.25", "新井彩永 ファンクラブ限定イベント 開催決定！", "/news/detail/ad778cb3-4fb0-47a4-889a-708cceff12e7"],
-      ["2025.10.01", "10月12日「そこに未来はある」公演　新井彩永生誕祭 個人ファンクラブ枠", "/news/detail/ffd739cb-9aa9-4f7b-8c69-7be0ff11fda5"]
-    ]},
+      ["2025.10.01", "10月12日「そこに未来はある」公演　新井彩永生誕祭 個人ファンクラブ枠", "/news/detail/ffd739cb-9aa9-4f7b-8c69-7be0ff11fda5"],
+      ["2025.09.19", "新規入会キャンペーンのお知らせ ※2/2追記", "/news/detail/a2a62711-051a-4c97-8984-c0aa519986f8"],
+      ["2025.09.19", "新井彩永 オフィシャルファンクラブ オープン！", "/news/detail/810a9114-e006-4e46-bcee-7941537919c4"]
+    ] },
     { name: "山口結愛", origin: "https://yamaguchiyui.officialfc.jp", news: [
       ["2026.08.06", "山口結愛オンラインガチャが8月7日(金)18:00より開催決定！", "/news/detail/508426a9-c0d8-4605-9ace-1504381fe63d"],
       ["2026.04.14", "山口結愛ファンクラブイベント「ゆいちーず大集合！～みんなの笑顔が見たいっちゃん～」開催決定！", "/news/detail/185304b9-81db-43e3-9671-8c6e42a0add6"],
       ["2026.04.09", "山口結愛 ファンクラブ限定イベント 開催決定！", "/news/detail/8b823e16-b6d3-4c67-b8a0-4bd2e3b2cfe4"],
       ["2026.03.05", "3月17日「RESET」公演　山口結愛生誕祭 個人ファンクラブ枠お申込みについて", "/news/detail/0110d54f-69e2-447c-bcb1-a1f1941bc2cb"],
-      ["2026.01.13", "山口結愛ファンクラブイベント「ゆいち！ゆいち！ゆいちーずと遊びたいっちゃん！」開催決定！", "/news/detail/8aa7c559-8202-4c1d-b192-0659a99aee53"]
-    ]},
+      ["2026.01.13", "山口結愛ファンクラブイベント「ゆいち！ゆいち！ゆいちーずと遊びたいっちゃん！」開催決定！", "/news/detail/8aa7c559-8202-4c1d-b192-0659a99aee53"],
+      ["2025.12.25", "山口結愛 ファンクラブ限定イベント 開催決定！", "/news/detail/b2dbd862-da86-4b63-935a-db360c5e9cf9"],
+      ["2025.10.22", "山口結愛オンラインガチャ10月23日(木)19:00より開催決定！", "/news/detail/96fdd7d9-798f-43d3-84f8-004d2020f0eb"],
+      ["2025.09.26", "新規入会キャンペーンのお知らせ ※2/2追記", "/news/detail/eaa60112-edcd-4f82-97d9-ecb902f8bfb5"],
+      ["2025.09.26", "山口結愛 オフィシャルファンクラブ オープン！", "/news/detail/89c36bda-9c6f-45dd-9418-0ba1a9b9a22e"]
+    ] },
     { name: "八木愛月", origin: "https://yagiazuki.officialfc.jp", news: [
+      ["2026.08.31", "八木愛月ファンクラブイベント「あんこちゃんずてんきゅー祭」開催決定！", "/news/detail/9c17a54e-3325-42e2-9a6e-7b7235f49139"],
       ["2026.08.24", "八木愛月 ファンクラブイベント 開催決定！", "/news/detail/70d4b8bb-e40c-429b-8402-555c7a205466"],
       ["2026.05.17", "5月29日「ここからだ」公演　八木愛月生誕祭 個人ファンクラブ枠お申込みについて", "/news/detail/e97b88cb-31bc-479a-9515-bad72815cc09"],
       ["2026.03.02", "【通信販売】八木愛月 FCオリジナルグッズ販売のお知らせ", "/news/detail/703e9f70-a8bc-4d57-b176-daad5b71f5ae"],
       ["2026.01.22", "八木愛月ファンクラブイベント「あんこちゃんずと楽しい時間」の巻開催決定！", "/news/detail/c54381f0-9b05-4193-a31a-c68216cc6bf0"],
-      ["2026.01.15", "八木愛月 ファンクラブ限定イベント 開催決定！", "/news/detail/f0613ecc-2b3b-4c0f-95e3-576bdacc9947"]
-    ]},
+      ["2026.01.15", "八木愛月 ファンクラブ限定イベント 開催決定！", "/news/detail/f0613ecc-2b3b-4c0f-95e3-576bdacc9947"],
+      ["2025.10.22", "新規入会キャンペーンのお知らせ ※2/16追記", "/news/detail/f153f345-d2b8-4d7c-9977-b186fa344ebe"],
+      ["2025.10.22", "八木愛月 オフィシャルファンクラブ オープン！", "/news/detail/3b80a27c-7ad7-424f-9549-11ea3f3c2e1d"]
+    ] },
     { name: "迫由芽実", origin: "https://yumemi.officialfc.jp", news: [
       ["2026.08.13", "迫由芽実 SUMMER オンラインガチャが 14日より開催決定！", "/news/detail/551bc0c1-1699-46dd-b851-31484040b7bb"],
       ["2026.05.14", "迫由芽実ファンクラブイベント「ゆめみんとあまあまパーティー♡〜Sweet Dream Party〜」開催決定！", "/news/detail/6f48a066-7a5c-4d86-96e5-c2a020539469"],
       ["2026.05.08", "迫由芽実 ファンクラブイベント 開催決定！", "/news/detail/c8c567c8-559c-4da2-92b8-80aff2bb7e86"],
       ["2026.02.04", "迫由芽実　生誕記念オンラインガチャが 5日より開催決定！", "/news/detail/43e8c264-e5d6-4700-978c-c10ad0695129"],
-      ["2026.01.24", "2月5日「RESET」公演　迫由芽実生誕祭 個人ファンクラブ枠", "/news/detail/f724e79b-d868-49d6-b1d6-45bbd103ebba"]
-    ]},
+      ["2026.01.24", "2月5日「RESET」公演　迫由芽実生誕祭 個人ファンクラブ枠", "/news/detail/f724e79b-d868-49d6-b1d6-45bbd103ebba"],
+      ["2025.11.07", "新規入会キャンペーンのお知らせ", "/news/detail/cab37be7-f635-4ae8-b486-fbea8dca3837"],
+      ["2025.11.07", "迫由芽実 オフィシャルファンクラブ オープン！", "/news/detail/716d5650-63d5-4443-88e0-07648d55d9c9"]
+    ] },
     { name: "久保姫菜乃", origin: "https://kubohinano.22.officialfc.jp", news: [
       ["2026.08.10", "久保姫菜乃ファンクラブイベント「ひみつのお部屋で待ち合わせ♡」開催決定！", "/news/detail/9cdc1c61-35f9-4ddf-86b3-33cf75d8a50f"],
       ["2026.07.31", "久保姫菜乃ファンクラブイベント開催決定！", "/news/detail/c34c1f4b-3e47-46fb-a010-0fe0769657b4"],
       ["2026.05.14", "久保姫菜乃ファンクラブイベント「プリンセスひなちゃんとぷりぷりティータイム」開催決定！", "/news/detail/8887dfc8-a794-4f11-9c82-fd55563e0db7"],
-      ["2026.05.08", "久保姫菜乃 ファンクラブイベント 開催決定！", "/news/detail/77ce14de-5135-4674-bfa0-bbf496a1d358"],
-      ["2026.02.02", "久保姫菜乃　生誕記念オンラインガチャが 本日21時より開催決定！", "/news/detail/9d223577-77b9-4c8b-8377-6a80bb4dc9c0"]
-    ]},
+      ["2026.05.08", "久保姫菜乃  ファンクラブイベント 開催決定！", "/news/detail/77ce14de-5135-4674-bfa0-bbf496a1d358"],
+      ["2026.02.02", "久保姫菜乃　生誕記念オンラインガチャが 本日21時より開催決定！", "/news/detail/9d223577-77b9-4c8b-8377-6a80bb4dc9c0"],
+      ["2026.01.22", "2月2日「RESET」公演　久保姫菜乃生誕祭 個人ファンクラブ枠", "/news/detail/cf7eb232-49ba-43f8-86e7-f2ec7606e66b"],
+      ["2025.11.14", "新規入会キャンペーンのお知らせ", "/news/detail/c45c159d-b2a9-41c1-8711-1fecc8cf0d52"],
+      ["2025.11.14", "久保姫菜乃 オフィシャルファンクラブ オープン！", "/news/detail/40e14fd5-6175-491c-bf1f-21d33c1cb92a"]
+    ] },
     { name: "秋山由奈", origin: "https://akiyamayuna.officialfc.jp", news: [
       ["2026.07.10", "秋山由奈 オンラインガチャが本日19時より開催！", "/news/detail/8f9fbc56-e470-4819-b61e-78696413ce04"],
       ["2026.03.01", "【通信販売】秋山由奈 FCオリジナルグッズ販売のお知らせ", "/news/detail/dd98c898-f628-42de-97b5-7ea5fa5dcef6"],
       ["2026.01.22", "秋山由奈ファンクラブイベント「ゆなといっしょに最強スマイルday♡」開催決定！", "/news/detail/0c5c1e84-62fd-42f8-a5b0-936d2456d92f"],
       ["2026.01.15", "秋山由奈 ファンクラブ限定イベント 開催決定！", "/news/detail/40a99b85-e9d8-4842-8095-5cc6e61905f6"],
-      ["2026.01.04", "1月16日「ここからだ」公演　秋山由奈生誕祭 個人ファンクラブ枠", "/news/detail/33ba93cb-e459-4fa1-bf0a-2730749bd441"]
-    ]},
+      ["2026.01.04", "1月16日「ここからだ」公演　秋山由奈生誕祭 個人ファンクラブ枠", "/news/detail/33ba93cb-e459-4fa1-bf0a-2730749bd441"],
+      ["2025.12.05", "【重要】システム不備による不具合のお知らせ", "/news/detail/9041d569-66c2-41c8-9d17-79986e0f30f1"],
+      ["2025.12.01", "新規入会キャンペーンのお知らせ", "/news/detail/d409ef68-e6d3-46e6-8743-4b7b928b9039"],
+      ["2025.12.01", "秋山由奈 オフィシャルファンクラブ オープン！", "/news/detail/272d28fc-6d2d-432c-ab18-c369d1a46b56"]
+    ] },
     { name: "成田香姫奈", origin: "https://kohinanarita.officialfc.jp", news: [
-      ["2026.07.03", "成田香姫奈ファンクラブイベント「KOHINA'S PLAYLIST」詳細決定！", "/news/detail/ef5fbc06-0921-4298-88c8-a1fcc640538a"],
+      ["2026.07.03", "成田香姫奈ファンクラブイベント「KOHINA’S PLAYLIST」詳細決定！", "/news/detail/ef5fbc06-0921-4298-88c8-a1fcc640538a"],
       ["2026.07.02", "成田 香姫奈オンラインガチャが7月3日(木)より開催決定！", "/news/detail/ac87f7e3-dff3-4df2-b582-88565bc3526c"],
       ["2026.06.25", "成田香姫奈 ファンクラブイベント 開催決定！", "/news/detail/5a9d9b95-4f22-4537-89a0-9cd42e7a7978"],
       ["2026.03.10", "【通信販売】成田香姫奈 FCオリジナルグッズ販売のお知らせ", "/news/detail/98099147-2ff3-4c9c-8632-f649de5a881b"],
-      ["2026.02.28", "3月12日「ここからだ」公演　成田香姫奈 生誕祭 個人ファンクラブ枠", "/news/detail/e278eb7f-625f-4b82-84dd-16d7cff7a65c"]
-    ]},
+      ["2026.02.28", "3月12日「ここからだ」公演　成田香姫奈 生誕祭 個人ファンクラブ枠", "/news/detail/e278eb7f-625f-4b82-84dd-16d7cff7a65c"],
+      ["2025.12.10", "新規入会キャンペーンのお知らせ", "/news/detail/06c759c3-0ee8-4227-b88c-dd794789b9e8"],
+      ["2025.12.10", "成田香姫奈 オフィシャルファンクラブ オープン！", "/news/detail/2aa331fe-0a17-4c1a-82ee-8fb05c0c7a2a"]
+    ] },
     { name: "下尾みう", origin: "https://miumiuhouse.officialfc.jp", news: [
       ["2026.08.08", "下尾みう屋形船イベント『みう曜日〜秋の宴〜』開催決定！", "/news/detail/9185d2e3-893d-4b38-a63e-4411d20a1ddd"],
       ["2026.04.21", "5月3日「RESET」公演　下尾みう生誕祭 個人ファンクラブ枠お申込みについて", "/news/detail/e85936b2-dcc6-421b-8a3f-26c796107931"],
       ["2026.03.02", "下尾みうファンクラブイベント「Happy Miu Day 〜25歳になりました！〜」開催決定！", "/news/detail/1951c608-02f6-4da4-86d1-cca5d6fe60c9"],
       ["2026.02.20", "下尾みう ファンクラブ限定イベント開催決定！", "/news/detail/36ecc9b8-0495-405f-9356-70f62708ef03"],
-      ["2026.01.27", "下尾みう オンラインガチャが 30日(金)より開催決定！", "/news/detail/fb848c0f-72b5-473f-8b3e-908d025af877"]
-    ]}
+      ["2026.01.27", "下尾みう オンラインガチャが 30日(金)より開催決定！", "/news/detail/fb848c0f-72b5-473f-8b3e-908d025af877"],
+      ["2026.01.26", "新規入会キャンペーンのお知らせ", "/news/detail/9fb5e3e5-c127-4e80-86ec-27c50cf49abe"],
+      ["2026.01.26", "下尾みう オフィシャルファンクラブ オープン！", "/news/detail/87d2d91f-55ad-4f50-9ccb-2c70aa391963"]
+    ] }
   ];
 
-  var TODAY = new Date("2026-08-30");
+  var TODAY = new Date("2026-08-31");
   var PAGE_SIZE = 40;
   var shown = PAGE_SIZE;
   var activeMember = null;
