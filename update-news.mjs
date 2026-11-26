@@ -32,6 +32,7 @@ const MEMBERS = [
   ["秋山由奈", "https://akiyamayuna.officialfc.jp"],
   ["成田香姫奈", "https://kohinanarita.officialfc.jp"],
   ["下尾みう", "https://miumiuhouse.officialfc.jp"],
+  ["橋本陽菜", "https://harunahashimoto.officialfc.jp"],
 ];
 
 const MAX_ITEMS_PER_MEMBER = 20;
