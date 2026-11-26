@@ -39,12 +39,13 @@ const UA = "Mozilla/5.0 (compatible; akb-solofc-news-bot/1.0; +https://github.co
 
 function decodeEntities(str) {
   return str
-    .replace(/&amp;/g, "&")
     .replace(/&lt;/g, "<")
     .replace(/&gt;/g, ">")
     .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'")
-    .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)));
+    .replace(/&apos;/g, "'")
+    .replace(/&#x([0-9a-fA-F]+);/g, (_, n) => String.fromCodePoint(parseInt(n, 16)))
+    .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)))
+    .replace(/&amp;/g, "&");
 }
 
 async function fetchMemberNews(origin) {
