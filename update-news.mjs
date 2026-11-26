@@ -32,6 +32,7 @@ const MEMBERS = [
   ["秋山由奈", "https://akiyamayuna.officialfc.jp"],
   ["成田香姫奈", "https://kohinanarita.officialfc.jp"],
   ["下尾みう", "https://miumiuhouse.officialfc.jp"],
+  ["橋本陽菜", "https://harunahashimoto.officialfc.jp"],
 ];
 
 const MAX_ITEMS_PER_MEMBER = 20;
@@ -39,12 +40,13 @@ const UA = "Mozilla/5.0 (compatible; akb-solofc-news-bot/1.0; +https://github.co
 
 function decodeEntities(str) {
   return str
-    .replace(/&amp;/g, "&")
     .replace(/&lt;/g, "<")
     .replace(/&gt;/g, ">")
     .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'")
-    .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)));
+    .replace(/&apos;/g, "'")
+    .replace(/&#x([0-9a-fA-F]+);/g, (_, n) => String.fromCodePoint(parseInt(n, 16)))
+    .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)))
+    .replace(/&amp;/g, "&");
 }
 
 async function fetchMemberNews(origin) {
@@ -89,7 +91,7 @@ function buildMembersLiteral(results) {
     const newsBlock = news.length ? `[\n${newsLines}\n    ]` : "[]";
     return `    { name: ${jsStringLiteral(name)}, origin: ${jsStringLiteral(origin)}, news: ${newsBlock} }`;
   });
-  return `  var MEMBERS = [\n${lines.join(",\n")}\n  ];`;
+  return `var MEMBERS = [\n${lines.join(",\n")}\n  ];`;
 }
 
 async function main() {
@@ -127,7 +129,7 @@ async function main() {
   if (!/var MEMBERS = \[[\s\S]*?\n  \];/.test(html)) {
     throw new Error("Could not locate MEMBERS array in index.html — aborting to avoid corrupting the file.");
   }
-  html = html.replace(/var MEMBERS = \[[\s\S]*?\n  \];/, membersLiteral);
+  html = html.replace(/^[ \t]*var MEMBERS = \[[\s\S]*?\n  \];/m, () => `  ${membersLiteral}`);
 
   const today = new Date();
   const jstOffsetMs = 9 * 60 * 60 * 1000;
