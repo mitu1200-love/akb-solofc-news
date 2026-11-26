@@ -91,7 +91,7 @@ function buildMembersLiteral(results) {
     const newsBlock = news.length ? `[\n${newsLines}\n    ]` : "[]";
     return `    { name: ${jsStringLiteral(name)}, origin: ${jsStringLiteral(origin)}, news: ${newsBlock} }`;
   });
-  return `  var MEMBERS = [\n${lines.join(",\n")}\n  ];`;
+  return `var MEMBERS = [\n${lines.join(",\n")}\n  ];`;
 }
 
 async function main() {
@@ -129,7 +129,7 @@ async function main() {
   if (!/var MEMBERS = \[[\s\S]*?\n  \];/.test(html)) {
     throw new Error("Could not locate MEMBERS array in index.html — aborting to avoid corrupting the file.");
   }
-  html = html.replace(/var MEMBERS = \[[\s\S]*?\n  \];/, membersLiteral);
+  html = html.replace(/^[ \t]*var MEMBERS = \[[\s\S]*?\n  \];/m, () => `  ${membersLiteral}`);
 
   const today = new Date();
   const jstOffsetMs = 9 * 60 * 60 * 1000;
